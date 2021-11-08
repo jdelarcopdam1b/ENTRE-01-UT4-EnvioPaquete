@@ -2,7 +2,7 @@
 /**
  *  Representa una dimensión
  *  
- *  @author - 
+ *  @author Jonathan del arco
  */
 public class Dimension  
 {
@@ -17,7 +17,6 @@ public class Dimension
         this.alto = alto;
         this.ancho = ancho;
         this.largo = largo;
-
     }   
 
     /**
@@ -45,19 +44,17 @@ public class Dimension
      * Devuelve una copia exacta al objeto actual
      */
     public Dimension obtenerCopia() {
-        //TODO
-        return null;
-
+        Dimension copy = new Dimension(alto, ancho, largo);
+        return copy;
     }
-
+    
     /**
      * Repesentación textual de la dimensión
-     * (leer enunciado)
+     * (leer enunciado) 
      */
     public String toString() {
-        //TODO
-        return null;
-
+        String format = String.format("%20s: %10.2f %s \n%20s: %10.2f %s \n%20s: %10.2f %s", "Alto", alto, "(cm)", "Ancho", ancho, "(cm)", "Largo", largo, "(cm)");
+        return format;
     }
 
     /**
