@@ -1,4 +1,3 @@
-
 /**
  *  Representa una dimensión
  *  
@@ -39,13 +38,12 @@ public class Dimension
     public double getLargo()    {
         return largo;
     }
-
+    
     /**
      * Devuelve una copia exacta al objeto actual
      */
     public Dimension obtenerCopia() {
-        Dimension copy = new Dimension(alto, ancho, largo);
-        return copy;
+        return new Dimension(this.alto, this.ancho, this.largo);
     }
     
     /**
@@ -53,7 +51,7 @@ public class Dimension
      * (leer enunciado) 
      */
     public String toString() {
-        String format = String.format("%20s: %10.2f %s \n%20s: %10.2f %s \n%20s: %10.2f %s", "Alto", alto, "(cm)", "Ancho", ancho, "(cm)", "Largo", largo, "(cm)");
+        String format = String.format("%20s: %10.2f %s \n%20s: %10.2f %s \n%20s: %10.2f %s", "Alto", alto, "(cm)", "Ancho", ancho, "(cm)", "Largo", largo, "(cm) \n");
         return format;
     }
 
